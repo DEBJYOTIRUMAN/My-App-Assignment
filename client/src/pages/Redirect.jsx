@@ -8,7 +8,7 @@ const Redirect = () => {
   const { setUser } = useContext(MyAppContext);
 
   useEffect(() => {
-    fetch(`http://localhost:4000/api/link/${params.token}`)
+    fetch(`https://myapp-iy51.onrender.com/api/link/${params.token}`)
       .then((res) => res.json())
       .then((userData) => {
         if (!userData._id) {

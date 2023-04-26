@@ -10,12 +10,11 @@ const Login = () => {
   const { user } = useContext(MyAppContext);
   useEffect(() => {
     if (Object.keys(user).length !== 0) {
-      if(user.name.length !== 0){
+      if (user.name.length !== 0) {
         navigate("/dashboard");
         return;
       }
       navigate("/onboarding");
-      
     }
   }, [user]);
 
@@ -30,7 +29,7 @@ const Login = () => {
   });
 
   const handleLogin = (values) => {
-    fetch("http://localhost:4000/api/login", {
+    fetch("https://myapp-iy51.onrender.com/api/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

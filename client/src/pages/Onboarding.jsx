@@ -33,7 +33,7 @@ const Onboarding = () => {
   });
 
   const submit = (values) => {
-    fetch(`http://localhost:4000/api/user/${user._id}`, {
+    fetch(`https://myapp-iy51.onrender.com/api/user/${user._id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -74,7 +74,10 @@ const Onboarding = () => {
           <Header />
           <div className="flex items-center w-full max-w-xl px-6 mx-auto py-12">
             <div className="flex-1">
-              <Content title="Onboarding" desc="Welcome to My App. Please enter your name to get started." />
+              <Content
+                title="Onboarding"
+                desc="Welcome to My App. Please enter your name to get started."
+              />
               <div className="mt-8">
                 <div>
                   <label htmlFor="name" className="mb-2 text-sm hidden">
